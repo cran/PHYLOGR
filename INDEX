@@ -1,0 +1,19 @@
+cancor.phylog            Canonical Correlation Analysis from Simulated
+                         Data Sets
+cor.origin               Correlation Through the Origin
+lm.phylog                Linear Models from Simulated Data Sets
+matrix.D                 Produce the Matrix D of Garland and Ives (2000)
+                         for GLS
+phylog.gls.fit           Phylogenetically-Based GLS Model Fitting
+plot.phylog.cancor       Plot a phylog.cancor object
+plot.phylog.lm           Plot a phylog.lm object
+plot.phylog.prcomp       Plot a phylog.prcomp object
+prcomp.phylog            Principal Components Analysis from Simulated
+                         Data Sets
+read.inp.data            Read Inp Data Files
+read.pdi.data            Read Pdi Data Files
+read.phylog.matrix       Read a Phylogenetic Covariance Matrix
+read.sim.data            Read Sim Files From PDSIMUL
+summary.phylog.cancor    Summarize a phylog.cancor object
+summary.phylog.lm        Summarize a phylog.lm object
+summary.phylog.prcomp    Summarize a phylog.prcomp object
