@@ -1,4 +1,4 @@
-require("mva")
+#require("mva")
 
 number.of.tips.sim <- function(x){
   ## extracts number of tips from a simulation file
@@ -482,6 +482,10 @@ lm.phylog <- function(formula, data, max.num = 0, weights = NULL,
 ## This function is based on drop1 (a function in the R base distribution),
 ## by B.D. Ripley;
 ## all I have done here is eliminate things I didn't need.
+
+        ## From R-1.9.0 deviance.lm no longer available. Kludge here:
+        deviance.lm <- function(object, ...)
+            sum(weighted.residuals(object)^2, na.rm=TRUE)
         
         x <- model.matrix(object)
         iswt <- !is.null(wt <- object$weights)
@@ -516,8 +520,7 @@ lm.phylog <- function(formula, data, max.num = 0, weights = NULL,
         Fs <- (dev/dfs)/rms
         Fs
     }
-    
-    
+       
     
     if(min(data$sim.counter) == 1)
         stop("You need the input file to include original data from an inp or similar file; these are the data whose coefficients you are trying to test")
@@ -641,7 +644,7 @@ lm.phylog <- function(formula, data, max.num = 0, weights = NULL,
 
 prcomp.phylog <- function(data, max.num = 0, exclude.tips = NULL,
                           lapply.size = 100, center = TRUE, scale = TRUE){
-  require(mva, quietly = FALSE, warn.conflicts = TRUE)
+##  require(mva, quietly = FALSE, warn.conflicts = TRUE) no longer needed
 ## pass as data the columns you want analyzed AND, as first column, sim.counter
     ## and as second columns Tips
 ## using looping over lapply and keeping my.drop outside  
