@@ -8,12 +8,14 @@
   returns p-values. There is a print 'method' for this summary.
 }
 \usage{
-summary.phylog.lm(x)
+\method{summary}{phylog.lm}(object, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
- \item{x}{ an object of class phylog.lm returned from a previous call to
- lm.phylog.}
+ \item{object}{ an object of class phylog.lm returned from a previous call to
+   lm.phylog.}
+ \item{...}{ further arguments passed to or from other methods
+   (currently not used).}
 }
 \details{ The p-value is computed as the (number of simulated data sets
   with F-value larger than original (''real'') data + 1) / (number of simulated

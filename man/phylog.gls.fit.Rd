@@ -6,7 +6,7 @@
   Fits a GLS linear model, as in Garland and Ives (2000), using a
   phylogenetic variance-covariance function}
 \usage{
-phylog.gls.fit(x, y, cov.matrix, intercept=TRUE)
+phylog.gls.fit(x, y, cov.matrix, intercept = TRUE, exclude.tips = NULL)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
@@ -18,6 +18,8 @@ phylog.gls.fit(x, y, cov.matrix, intercept=TRUE)
  \item{cov.matrix}{ The phylogenetic variance-covariance matrix, which
    can be obtained from read.phylog.matrix.}
  \item{intercept}{ Include an intercept in the model? Defaults to TRUE }
+ \item{exclude.tips}{ The tips to be excluded from the
+   analyses. Defaults to NULL}
 }
 
 \value{a fitted linear model}

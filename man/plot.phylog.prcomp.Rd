@@ -10,13 +10,14 @@
 
 }
 \usage{
-plot.phylog.prcomp(x)
+\method{plot}{phylog.prcomp}(x, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
  \item{x}{ an object of class phylog.prcomp such as can be obtained
    from a previous call to prcomp.phylog. }
-
+ \item{...}{ other parameters to be passed to through to plotting
+   functions (currently not used). }
 }
 
 \references{

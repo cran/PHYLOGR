@@ -12,12 +12,14 @@
 
 }
 \usage{
-plot.phylog.lm(x)
+\method{plot}{phylog.lm}(x, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
  \item{x}{ an object of class phylog.lm returned from a previous call to
- lm.phylog. }
+   lm.phylog. }
+ \item{...}{ other parameters to be passed to through to plotting
+   functions (currently not used). }
 
 }
 

@@ -11,12 +11,14 @@
 
 }
 \usage{
-plot.phylog.cancor(x)
+\method{plot}{phylog.cancor}(x, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
  \item{x}{ an object of class phylog.cancor returned from a previous call to
  cancor.phylog. }
+ \item{...}{ other parameters to be passed to through to plotting
+   functions (currently not used). }
 
 }
 

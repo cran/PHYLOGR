@@ -13,7 +13,8 @@ matrix.D(x)
 %- maybe also `usage' for other objects documented here.
 \arguments{
  \item{x}{ a phylogenetic variance-covariance matrix, such as a matrix returned
-   from a call to read.phylog.matrix.}
+   from a call to read.phylog.matrix. }
+ 
 }
 \value{A variance-covariance matrix.}
 \references{
@@ -27,11 +28,12 @@ matrix.D(x)
 }
 
 \note{ The file read is a dsc file generated from PDDIST under option 5
-  with the additional options : - in matrix form; - with header; - with scaled values
+  with the additional options : - in matrix form; - with header; - with
+  scaled values. }
 \author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
 
 
-\seealso{ \code{\link{read.phylog.matrix}}, \code{\link{phylog.gls.fit}}}
+\seealso{\code{\link{read.phylog.matrix}}, \code{\link{phylog.gls.fit}}}
 
 \examples{
 #perform GLS using lm function after transforming the variables
@@ -43,6 +45,6 @@ Z <- mD \%*\% Lacertid.Original$clutch.size
 U <- mD \%*\% cbind(rep(1,18),Lacertid.Original$svl) # intercept included
 lm1 <- lm(Z ~ U - 1) # eliminate intercept, since already included in U matrix
 summary(lm1)
-
 }
-\keyword{ array }%-- one or more ...
+
+\keyword{array}%-- one or more ...

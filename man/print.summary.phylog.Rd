@@ -1,4 +1,4 @@
-\name{phylog.print}
+\name{print.summary.phylog}
 \alias{print.summary.phylog.lm}
 \alias{print.summary.phylog.cancor}
 \alias{print.summary.phylog.prcomp}
@@ -11,16 +11,19 @@
   summary.phylog.prcomp, respectively.
 }
 \usage{
-print.summary.phylog.lm(summary.phylog.lm.object)
-print.summary.phylog.cancor(summary.phylog.cancor.object)
-print.summary.phylog.prcomp(summary.phylog.prcomp.object)
-
+\method{print}{summary.phylog.lm}(x, ...)
+\method{print}{summary.phylog.cancor}(x, ...)
+\method{print}{summary.phylog.prcomp}(x, ...)
 }
+\arguments{
+  \item{x} { an object of the appropriate class.}
+  \item{...}{ further parameters to be passed (currently not used). }
+  }
 %- maybe also `usage' for other objects documented here.
 \details{
   These functions are called automagically whenever you type
   'summary(object.name)' or you type the name of a summary object; these
-  functionssimply provide nicer formated output.
+  functions simply provide nicer formated output.
 }
 \value{
   See explanation of output in summary.phylog.lm, summary.phylog.cancor,

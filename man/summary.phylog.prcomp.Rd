@@ -9,12 +9,14 @@
   for this summary.
 }
 \usage{
-summary.phylog.prcomp(x)
+\method{summary}{phylog.prcomp}(object, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
- \item{x}{ an object of class phylog.prcomp such as one returned from a previous
+ \item{object}{ an object of class phylog.prcomp such as one returned from a previous
    call to prcomp.phylog. }
+ \item{...}{ further arguments passed to or from other methods
+   (currently not used).}
 }
 \details{
   The p-values are calculated in two different ways. The 'component-wise' ones,

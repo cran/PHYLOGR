@@ -9,12 +9,14 @@
   for this summary.
 }
 \usage{
-summary.phylog.cancor(x)
+\method{summary}{phylog.cancor}(object, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
- \item{x}{ an object of class phylog.cancor returned from a previous
+ \item{object}{ an object of class phylog.cancor returned from a previous
    call to cancor.phylog. }
+ \item{...}{further arguments passed to or from other methods (currently
+   not used)}.
 }
 \details{
   To test the hypothesis that all population canonical correlations are
