@@ -1,0 +1,12 @@
+Dataframes:
+
+GarlandJanis.Original	Original data from Garland & Janis (1993)
+GarlandJanis.varcov	Phylogenetic var-cov matrix for above data using read.phylog.matrix
+GarlandJanis.IC	Independent contrasts from the Garland & Janis data set
+
+Lacertid.Original	Original lacertid data set (Bauwens & Díaz-Uriarte, 1997)
+Lacertid.varcov	Phylogenetic var-cov matrix obtained using read.phylog.matrix
+Lacertid.IC	Independent contrasts from the lacertid data set
+
+SimulExample	A small set of simulated data used in several examples on the help files (read with read.sim.data)
+phylog.matrix.example	The var-cov (read with read.phylog.matrix) fro SimulExample.
