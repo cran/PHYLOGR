@@ -344,12 +344,17 @@ plot.phylog.lm<-function(x){
   
 
 
+
+
 lm.phylog<-function(formula,data,max.num=0,weights=NULL,exclude.tips=NULL,lapply.size=100){
 # using looping over lapply and keeping my.drop outside  
 
 my.drop<- function (object) 
 {
-  # returns ONLY the marginal F's; from drop1, after eliminating things I didn't need
+  # Returns ONLY the marginal F's.
+    # This function is based on drop1 (a function in the R base distribution), by B.D. Ripley;
+    # all I have done here is eliminate things I didn't need.
+    
     x <- model.matrix(object)
     iswt <- !is.null(wt <- object$weights)
     n <- nrow(x)
@@ -395,8 +400,13 @@ my.drop<- function (object)
   # Note, though, that if it is a vector in the parent environment it MUST have
   # the same length as any column in data, before data is reduced with arguments
   # max.num and exclude.tips.
-  # Things seem to work when weights is called as a function of a variable in data.
-  
+  # Things seem to work when weights is called as a function of a variable in data,
+  # but the data frame needs to be given explicitly; ej: weights=sqrt(dataxx$variableyy)
+
+  # Note that there have been several changes, w.r.t. initial versions, because of
+  # scoping differences between R-1.1.1 and R-1.2.0; I have used a solution
+  # provided by P. Dalgaard (email of 12-Oct-2000)
+
   if(!is.null(substitute(weights))){
     if(match(deparse(substitute(weights)),names(data),nomatch=0))
       data$w<-eval(parse(text=paste(deparse(substitute(data)),"$",substitute(weights),sep="")))
@@ -413,8 +423,14 @@ my.drop<- function (object)
 
 
   names.vars<-drop.scope(formula)
-  terms.in.model<-names(lm(formula=formula,data=data,weights=data$w,subset=data$sim.counter==0)[[1]]) # there should be a simpler way
-  if(terms.in.model[1]=="(Intercept)") terms.in.model[1]<-"Intercept"
+#  terms.in.model<-names(lm(formula=formula,data=data,weights=w,subset=sim.counter==0)[[1]]) # there should be a simpler way
+
+  terms.in.model<-names(lm(formula=formula,data=data,subset=sim.counter==0)[[1]]) #note that there is no weights argument here; problems getting it to run in both R-1.1.1 and R-1.2.0; after all, the names are the same with or without weights. Still, there should be a simpler way!!
+
+
+
+
+if(terms.in.model[1]=="(Intercept)") terms.in.model[1]<-"Intercept"
 
   loop.counter<-(max.num+1)%/%lapply.size
   rest.of.data<-(max.num+1)%%lapply.size
@@ -430,16 +446,18 @@ my.drop<- function (object)
   
      tmp[(((i-1)*lapply.size)+1):(i*lapply.size),]<-matrix(unlist(lapply(split(datai,datai$sim.counter),
                             function(datos,formula){
+                              environment(formula) <- environment()    
                               fm<-lm(formula=formula,data=datos, weights=datos$w);
                               c(fm[[1]],summary(fm)[[9]][[1]],my.drop(fm))},
                             formula=formula)),
                      nrow=lapply.size,byrow=T)
 }}
-#browser()
+
   if (rest.of.data){
 datai<-data[data$sim.counter>=(loop.counter*lapply.size),]
 tmp[(((i*lapply.size)+1):(max.num+1)),]<-matrix(unlist(lapply(split(datai,datai$sim.counter),
                             function(datos,formula){
+                              environment(formula) <- environment()  
                               fm<-lm(formula=formula,data=datos, weights=datos$w);
                               c(fm[[1]],summary(fm)[[9]][[1]],my.drop(fm))},
                             formula=formula)),
@@ -453,6 +471,11 @@ tmp[(((i*lapply.size)+1):(max.num+1)),]<-matrix(unlist(lapply(split(datai,datai$
             class=c("phylog.lm","list"))
 
 }
+
+
+
+
+
 
 
 

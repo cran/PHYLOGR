@@ -35,8 +35,8 @@ matrix.D(x)
 
 \examples{
 #perform GLS using lm function after transforming the variables
-data(phylog.matrix.example)
-mD <- matrix.D(phylog.matrix.example)
+data(Lacertid.varcov)
+mD <- matrix.D(Lacertid.varcov)
 data(Lacertid.Original)
 # obtain transformed variables
 Z <- mD \%*\% Lacertid.Original$clutch.size
