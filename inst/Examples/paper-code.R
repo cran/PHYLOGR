@@ -1,4 +1,5 @@
-#### paper-code.R   30-June-2000
+#### paper-code.R   original: 30-June-2000;
+#### a few later (August, October, November) modifications.
 
 
 
@@ -26,8 +27,7 @@
 
 ### You can run this file either one command at a time (cutting and
 ### pasting or, better yet, using ESS), or you can directly source the
-### file into R. So that you can run the whole thing with little
-### interruption we have commented out most of the "plot" commands.
+### file into R.
 ### To use "source" do:
 ### > source("paper-code.R",echo=TRUE,print.eval=TRUE,max.deparse.length=500)
 ### that will run the file, echo the commands, and return output.

@@ -29,7 +29,7 @@ read.pdi.data(input.pdi.files, variable.names=NULL)
 \author{ Díaz-Uriarte, R., and Garland, T., Jr.}
 
 \seealso{
-  \code{\link{read.inp.data}}, \code{\link{ read.sim.data}},  
+  \code{\link{read.inp.data}}, \code{\link{read.sim.data}},  
 }
 
 \examples{

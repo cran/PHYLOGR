@@ -31,7 +31,7 @@ Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
 \author{ Díaz-Uriarte, R., and Garland, T., Jr.}
 
 \seealso{
-  \code{\link{read.pdi.data}}, \code{\link{ read.sim.data}},  
+  \code{\link{read.pdi.data}}, \code{\link{read.sim.data}},  
 }
 
 \examples{
