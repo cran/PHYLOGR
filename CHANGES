@@ -1,3 +1,6 @@
+Version 1.0.1. 2001/12/22
+- Fixes in documentation (prompted by release 1.4.0 of R).
+
 Version 1.0.  2001/03/25 and 2001/04/30
 - Added read.phylip.data.
 - Modified read.sim.data to allow for PHYLIP formated files.
@@ -10,12 +13,11 @@ Version 0.91. 2000/11/07
 - Fixed missing links in documentation. 
 
 Version 0.9.  2000/10/30
-- Changed to make run under both R-1.1.1 and R-devel (the future R-1.2.0):
+- Changed to allow PHYLOGR to run under both R-1.1.1 and R-devel (the future R-1.2.0):
 	there were some scoping problems in lm.phylog with things that
 	worked under R-1.1.1 but not R-1.2.0.
 - Done more testing. Everything seems to work just fine; I think we are ready
 	for 1.0 (but being overly cautious...).
-
 
 Version 0.2.  2000/10/09
 - Changed files icfxx.fic, icfxx.pdi, icfxx.sim (log10 of clutch frequency).

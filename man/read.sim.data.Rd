@@ -8,9 +8,9 @@
   Can add original data from  inp or pdi file(s).
 }
 \usage{
-read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL,
-              phylip.file=NULL, variable.names=NULL,
-              other.variables=NULL, max.num=0)
+read.sim.data(sim.files, inp.files = NULL, pdi.files = NULL,
+              phylip.file = NULL, variable.names = NULL,
+              other.variables = NULL, max.num = 0)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
@@ -20,7 +20,7 @@ read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL,
  \item{pdi.files}{ the pdi file(s), with path if needed. Might have
    already been processed by read.pdi.data. If already read, enter name
    unquoted. }
- \itme{phylip.file}{ the phylip.file, with path if needed. Might have
+ \item{phylip.file}{ the phylip.file, with path if needed. Might have
    already been processed by read.phylip.data. If already read, enter
    name unquoted. }
  \item{variable.names}{ a optional vector of variable names}

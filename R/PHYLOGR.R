@@ -304,19 +304,19 @@ rep.matrix.data.frame <- function(x, times){
 
 
 
-summary.phylog.lm <- function(x){
+summary.phylog.lm <- function(object, ...){
 
   # note: we use quantile, so there is linear interpolation to find quantiles
-#  if(class(x) != "phylog.lm")
+#  if(class(object) != "phylog.lm")
 #    stop("Object mas be of class phylog.lm, such as obtained from the lm.phylog function")
-  num.simul <- dim(x$MarginalTests)[1]-1
-  F.value.sim <- as.matrix(x$MarginalTests[-1, ][-1])
-  F.value.original <- x$MarginalTests[1, ][-1]
+  num.simul <- dim(object$MarginalTests)[1]-1
+  F.value.sim <- as.matrix(object$MarginalTests[-1, ][-1])
+  F.value.original <- object$MarginalTests[1, ][-1]
   # make that into a matrix by repeating the value as many times as needed
   # takes up space but seems more efficient than other solutions
   F.value.original <- matrix(rep(as.matrix(F.value.original), num.simul), nrow = num.simul, byrow = T)
 #  sim.larger <- F.value.sim>F.value.original
-#  count.larger <- apply(sim.larger, 2, function(x){length(x[x == T])})
+#  count.larger <- apply(sim.larger, 2, function(object){length(object[object == T])})
 #  count.larger <- apply(F.value.sim>F.value.original, 2, sum)
 #  p.value <- (count.larger + 1)/(num.simul + 1)
 
@@ -325,7 +325,7 @@ summary.phylog.lm <- function(x){
   p.value <- (apply(F.value.sim>F.value.original, 2, sum) + 1)/(num.simul + 1) 
   
   quant.F.value <- apply(F.value.sim, 2, quantile, probs = c(.5, .9, .95, .99, .999))
-  structure(list(call = x$call, original.model = x$Fits[1, ][-1], original.Fvalue = x$MarginalTests[1, ][-1], 
+  structure(list(call = object$call, original.model = object$Fits[1, ][-1], original.Fvalue = object$MarginalTests[1, ][-1], 
           p.value = p.value, quant.Fvalue = quant.F.value, num.simul = num.simul), class = "summary.phylog.lm")
 }
            
@@ -344,7 +344,7 @@ print.summary.phylog.lm <- function(x, ...){
   invisible(x)}
     
 
-plot.phylog.lm <- function(x){
+plot.phylog.lm <- function(x, ...){
   oldpar <- par(no.readonly = TRUE)
   on.exit(par(oldpar))
   num.plot.fit <- length(names(x$Fits))-1
@@ -545,14 +545,14 @@ dimnames(tmp) <- list(NULL, paste("lambda", 1:(dim(data)[2]-1), sep = ""))
 
 }
 
-summary.phylog.prcomp <- function(x){
+summary.phylog.prcomp <- function(object, ...){
 
   # note: we use quantile, so there is linear interpolation to find quantiles
-#  if(class(x) != "phylog.lm")
+#  if(class(object) != "phylog.lm")
 #    stop("Object mas be of class phylog.lm, such as obtained from the lm.phylog function")
-  num.simul <- dim(x$Eigenvalues)[1]-1
-  eigenvalue.sim <- as.matrix(x$Eigenvalues[-1, ][-1])
-  eigenvalue.original <- x$Eigenvalues[1, ][-1]
+  num.simul <- dim(object$Eigenvalues)[1]-1
+  eigenvalue.sim <- as.matrix(object$Eigenvalues[-1, ][-1])
+  eigenvalue.original <- object$Eigenvalues[1, ][-1]
   # make that into a matrix by repeating the value as many times as needed
   # takes up space but seems more efficient than other solutions
   eigenvalue.original <- matrix(rep(as.matrix(eigenvalue.original), num.simul), nrow = num.simul, byrow = T)
@@ -588,7 +588,7 @@ summary.phylog.prcomp <- function(x){
   names(p.value2) <- names(p.value)
   mean.eigenvalue <- apply(eigenvalue.sim, 2, mean)
   quant.eigenvalue <- apply(eigenvalue.sim, 2, quantile, probs = c(.5, .9, .95, .99, .999))
-  structure(list(call = x$call, original.eigenvalues = x$Eigenvalues[1, ][-1], 
+  structure(list(call = object$call, original.eigenvalues = object$Eigenvalues[1, ][-1], 
           p.value.component = p.value, p.value.multiple = p.value2, mean.eigenvalue = mean.eigenvalue, quant.eigenvalue = quant.eigenvalue, num.simul = num.simul), class = "summary.phylog.prcomp")
 }
 
@@ -707,16 +707,16 @@ structure(list(call = match.call(),
 
 
 
-summary.phylog.cancor <- function(x){
+summary.phylog.cancor <- function(object, ...){
 
   # note: we use quantile, so there is linear interpolation to find quantiles
 
-  num.simul <- dim(x$CanonicalCorrelations)[1]-1
-  cancor.sim <- as.matrix(x$CanonicalCorrelations[-1, ][-1])
-  cancor.original <- x$CanonicalCorrelations[1, ][-1]
-  overall.sim <- x$LR.statistic[-1, 2]
+  num.simul <- dim(object$CanonicalCorrelations)[1]-1
+  cancor.sim <- as.matrix(object$CanonicalCorrelations[-1, ][-1])
+  cancor.original <- object$CanonicalCorrelations[1, ][-1]
+  overall.sim <- object$LR.statistic[-1, 2]
 #browser()
-  overall.original <- x$LR.statistic[1, 2]
+  overall.original <- object$LR.statistic[1, 2]
 
   # make that into a matrix by repeating the value as many times as needed
   # takes up space but seems more efficient than other solutions
@@ -740,8 +740,8 @@ summary.phylog.cancor <- function(x){
   names(overall.original) <- "lambda"
   
   quant.cancor <- apply(cancor.sim, 2, quantile, probs = c(.5, .9, .95, .99, .999))
-  structure(list(call = x$call, original.LR.statistic = overall.original, 
-                 original.canonicalcorrelations = x$CanonicalCorrelations[1, ][-1], 
+  structure(list(call = object$call, original.LR.statistic = overall.original, 
+                 original.canonicalcorrelations = object$CanonicalCorrelations[1, ][-1], 
           p.value.overall.test = overall.p.value, 
           p.value.corwise = p.value, p.value.multiple = p.value2, quant.canonicalcorrelations = quant.cancor, num.simul = num.simul), class = "summary.phylog.cancor")
 }
