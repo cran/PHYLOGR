@@ -1,3 +1,10 @@
+Version 1.0.  2001/03/25 and 2001/04/30
+- Added read.phylip.data.
+- Modified read.sim.data to allow for PHYLIP formated files.
+- Added Examples.pdf and renamed paper-code.R to Examples-code.R.
+- Some benchmarking and further testing.
+- Tidying up of the code.
+
 Version 0.91. 2000/11/07
 - Fixed problem with ask=T in plot methods.
 - Fixed missing links in documentation. 

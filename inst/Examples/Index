@@ -21,6 +21,8 @@ ifsmi.sim		Simulations
 ihshw.pdi		From Bauwens & Díaz-Uriarte; hatchling SVl and hatchling mass
 ihshw.fic		Contrasts
 ihshw.sim		Simulations
-paper-code.R		The R code for the Díaz-Uriarte & Garland, in review, paper (the paper that
-			describes the PHYLOGR library).
-
+LacertidData.PhylipInfile From Bauwens & Díaz-Uriarte, in a format that will be accepted by PHYLIP as infile (contains all the traits above).
+LacertidData.PhylipIntree From Bauwens & Díaz-Uriarte, in a format that will be accepted by PHYLIP as intree.
+Examples-code.R		The R code for the examples of the Díaz-Uriarte & Garland, in review, paper (the paper that
+			describes the PHYLOGR library). The examples are in the file Examples.pdf.
+Examples.pdf		Examples on the use of PHYLOGR, with commented code and output.

@@ -3,7 +3,7 @@
 %- Also NEED an `\alias' for EACH other topic documented here.
 \title{Read a Phylogenetic Covariance Matrix}
 \description{
-  Reads a dsc matrix file ---returned from the PDDIST program--- anc
+  Reads a dsc matrix file ---returned from the PDDIST program--- and
   converts into an R matrix for subsequent use.}
 \usage{
 read.phylog.matrix(x)

@@ -17,9 +17,9 @@ summary.phylog.cancor(x)
    call to cancor.phylog. }
 }
 \details{
-  To test the hypothesis that all populaiton canonical correlations are
+  To test the hypothesis that all population canonical correlations are
   zero we use the likelihood-ratio statistic from Krzanowski (pp. 447
-  and ff); this
+  and ff.); this
   statistic is computed for the original data set and for each of the
   simulated data sets, and we obtain the p-value as  (number of simulated data sets
   with LR statistic larger than original (''real'') data + 1) / (number of simulated
@@ -40,7 +40,7 @@ summary.phylog.cancor(x)
   support against the null hypothesis (of no singificant second
   canonical correlation) if both the first and the second canonical
   correlations from the observed data set are larger than most of the
-  simulated data sets. Therefore, we can account for what happens with
+  simulated data sets. We can account for what happens with
   the first canonical correlation by computing the p-value of the second
   canonical correlation as the number of simulations in which the second
   simulated canonical correlation is larger than the observed, or the

@@ -18,7 +18,7 @@ summary.phylog.lm(x)
 \details{ The p-value is computed as the (number of simulated data sets
   with F-value larger than original (''real'') data + 1) / (number of simulated
   data sets + 1).
-  The quantiles are obtained with the function quantile, so linear interpolation is used.
+  The quantiles are obtained with the function quantile, and thus linear interpolation is used.
 
 }
 \value{ A list (of class summary.phylog.lm) with components
