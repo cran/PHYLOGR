@@ -166,7 +166,7 @@ LacertidSim <- read.sim.data(c("ifsmi.sim", "ihshw.sim", "iclag.sim", "icfxx.sim
 
 LacertidSim <- LacertidSim[,-10] # exclude last column
 
-LacertidPCA <- prcomp.phylog(LacertidSim) # can take about 10 min
+LacertidPCA <- prcomp.phylog(LacertidSim) 
 
 summary(LacertidPCA)
 
@@ -199,11 +199,11 @@ cor.for.ic.pca <- matrix(nrow=7,ncol=7)
 
 for (i in 1:7) for (j in 1:7) cor.for.ic.pca[i,j] <- cor.origin(LacertidIC[[i]],LacertidIC[[j]]) # to obtain the 	correlation matrix based on regressions through the origin
 
-ic.pca<-svd(cor.for.ic.pca) #so that the eigenvectors are normalized
+ic.pca <- svd(cor.for.ic.pca) #so that the eigenvectors are normalized
 
-cor.with.factors<-t(sqrt(ic.pca$d) * t(ic.pca$u))
+cor.with.factors <- t(sqrt(ic.pca$d) * t(ic.pca$u))
 
-cor.with.factors<-as.data.frame(cor.with.factors)
+cor.with.factors <- as.data.frame(cor.with.factors)
 
 ic.pca$d # these are the eigenvalues
 
@@ -229,7 +229,7 @@ cor.with.factors # the correlation between the variables and the components
 
 LacertidOriginal <- LacertidSim[LacertidSim$sim.counter==0,-1] # we 	could read the pdi data again, but this is another simple way, 	since the original data are in the file with the simulated data
 
-Lacertid.varcov <- read.phylog.matrix("ifsmi.dsc") # from pddist, 	option 5, in matrix form, with header and scaled
+Lacertid.varcov <- read.phylog.matrix("ifsmi.dsc") # from pddist, option 5, in matrix form, with header
 
 # attach the data set, so variables can be accessed directly 
 # without reference to the data set
@@ -239,7 +239,7 @@ attach(LacertidOriginal)
 
 t(apply(LacertidOriginal[,-c(1,2)],2,function(y){summary(phylog.gls.fit(svl,y,Lacertid.varcov))[[4]][2,c(1,2)]}))
 
-### Garland & Janis
+#### Garland & Janis
 
 Garland.Janis.Orig <- read.pdi.data(c("49ms.pdi","49hmt.pdi"), variable.names = c("body.mass", "running.speed", "hind.l.length", "mtf.ratio"))
 Garland.Janis.Orig$clade <- as.factor(c(rep("Carnivore",19), rep("Herbivore",30)))
@@ -248,6 +248,7 @@ Garland.Janis.Cov <- read.phylog.matrix("49ms.dsc")
 detach(LacertidOriginal)
 detach(garland.janis.ic)
 attach(Garland.Janis.Orig)
+
 # all data
 fit.gls.gj <- phylog.gls.fit(cbind(body.mass,hind.l.length), running.speed, Garland.Janis.Cov) # the model fitting call
 

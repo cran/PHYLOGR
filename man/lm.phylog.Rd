@@ -35,7 +35,7 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
   will vary. If you are about to analyze a large number of simulations,
   you might also want to play around with the Memory
   settings, in particular the size of the heap. What is best with the
-  current version of R (1.0.1) might change in future releases because
+  current version of R (1.1.1) might change in future releases because
   of changes in memory management.
 }
 \value{A list of class phylog.lm with components
@@ -77,7 +77,8 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
 
 \examples{
 data(SimulExample)
-ex1.lm <- lm.phylog(y ~ x1+diet, weights=x2, max.num=20, exclude.tips=c("La","Ls"), data=SimulExample)
+ex1.lm <- lm.phylog(y ~ x1+diet, weights=x2, max.num=20,
+                    exclude.tips=c("La","Ls"), data=SimulExample)
 ex1.lm
 summary(ex1.lm)
 par(mfrow=c(2,2))

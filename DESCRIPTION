@@ -1,6 +1,6 @@
 Package: PHYLOGR
-Version: 0.1
-Date: 2000/08/30
+Version: 0.9
+Date: 2000/10/30
 Title: Functions for phylogenetically-based statistical analyses.
 Author: Ramón Díaz-Uriarte <ramon-diaz@teleline.es> and Theodore Garland, Jr <tgarland@facstaff.wisc.edu>.
 Depends: mva
