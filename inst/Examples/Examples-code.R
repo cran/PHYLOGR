@@ -1,5 +1,5 @@
-#### paper-code.R   original: 30-June-2000;
-#### a few later (August, October, November) modifications.
+#### Examples-code.R   original: 30-June-2000;
+#### a few later (August, October, November, March-2001) modifications.
 
 
 
@@ -29,7 +29,7 @@
 ### pasting or, better yet, using ESS), or you can directly source the
 ### file into R.
 ### To use "source" do:
-### > source("paper-code.R",echo=TRUE,print.eval=TRUE,max.deparse.length=500)
+### > source("Examples-code.R",echo=TRUE,print.eval=TRUE,max.deparse.length=500)
 ### that will run the file, echo the commands, and return output.
 
 

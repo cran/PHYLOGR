@@ -32,11 +32,7 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
   used. Changes can make a difference in speed; for instance, in my
   machine from about 1 sec per simulation for a set with 49 species to less than 0.5
   sec. The default value worked well in my machine, but your mileage
-  will vary. If you are about to analyze a large number of simulations,
-  you might also want to play around with the Memory
-  settings, in particular the size of the heap. What is best with the
-  current version of R (1.1.1) might change in future releases because
-  of changes in memory management.
+  will vary.
 }
 \value{A list of class phylog.lm with components
   \item{call}{the function call.}
@@ -64,10 +60,10 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
 \author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
 \note{ The marginal F-tests returned are obtained from drop1, and thus
   respect the marginality principle.  For instance,
-    if your model is y \~ x1 + x2*x3 you will see an F for x1 and an F
+    if your model is y \eqn{\sim}{~}  x1 + x2*x3 you will see an F for x1 and an F
     for x2:x3 but no F's for x2 or x3.  Discussion can be found,
     for example, in Venables & Ripley, (1999), ch. 6; see also Searle,
-    (1987), ch. 6 for the ANCOVA case.
+    (1987), ch. 6, for the ANCOVA case.
 
 }
 

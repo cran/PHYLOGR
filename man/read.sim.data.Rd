@@ -8,7 +8,8 @@
   Can add original data from  inp or pdi file(s).
 }
 \usage{
-read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL, variable.names=NULL,
+read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL,
+              phylip.file=NULL, variable.names=NULL,
               other.variables=NULL, max.num=0)
 }
 %- maybe also `usage' for other objects documented here.
@@ -19,6 +20,9 @@ read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL, variable.names=NULL,
  \item{pdi.files}{ the pdi file(s), with path if needed. Might have
    already been processed by read.pdi.data. If already read, enter name
    unquoted. }
+ \itme{phylip.file}{ the phylip.file, with path if needed. Might have
+   already been processed by read.phylip.data. If already read, enter
+   name unquoted. }
  \item{variable.names}{ a optional vector of variable names}
  \item{other.variables}{ an optional set of other variables that you want to add to the
    data set. Can be a vector, a matrix, or a data frame. It must be the
@@ -27,9 +31,9 @@ read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL, variable.names=NULL,
 }
 \details{
   
-  You will almost always want to provide inp or pdi file(s) since this
+  You will almost always want to provide inp or pdi or phylip file(s) since this
   is what will be used for the analyses of simulated data sets. The sim
-  and pdi (or inp) files should match one to one; for example, you might
+  and pdi (or inp or phylip) files should match one to one; for example, you might
   have used f1.pdi to obtain f1.sim and f2.pdi to produce f2.sim. Then,
   the order of files ought to be
   
@@ -50,8 +54,11 @@ read.sim.data(sim.files, inp.files=NULL, pdi.files=NULL, variable.names=NULL,
   since the last two will yield meaningless results.
   
   Remember  that the number of sim file(s) and pdi (or inp) files must match
-  (since that is the only way the number of columsn will
+  (since that is the only way the number of columns will
   match). 
+
+  This does not apply to PHYLIP infiles, since a PHYLIP infile can
+  contain multiple columns.
   
   Inp and Pdi files can not (yet) be mixed in a single call. If you need
   to, you should use read.inp.data and read.pdi.data, and change the
@@ -74,7 +81,7 @@ Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
 }
 \author{ Ramón Díaz-Uriarte and Thodore Garland, Jr.}
 
-\seealso{ \code{\link{read.pdi.data}}, \code{\link{read.inp.data}}. There
+\seealso{ \code{\link{read.pdi.data}}, \code{\link{read.inp.data}}, \code{\link{read.phylip.data}}. There
   are generic functions plot and summary.}
 
 

@@ -29,7 +29,7 @@ summary.phylog.prcomp(x)
   support against the null hypothesis (of no singificant second
   component) if both the first and the second eigenvalue
   from the observed data set are larger than most of the
-  simulated data sets. Therefore, we can account for what happens with
+  simulated data sets. We can account for what happens with
   the first eigenvalue by computing the p-value of the second
   eigenvalue as the number of simulations in which the second
   eigenvalue is larger than the observed, or the
