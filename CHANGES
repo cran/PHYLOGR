@@ -1,3 +1,7 @@
+Version 0.91. 2000/11/07
+- Fixed problem with ask=T in plot methods.
+- Fixed missing links in documentation. 
+
 Version 0.9.  2000/10/30
 - Changed to make run under both R-1.1.1 and R-devel (the future R-1.2.0):
 	there were some scoping problems in lm.phylog with things that

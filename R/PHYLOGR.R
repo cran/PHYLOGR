@@ -331,7 +331,11 @@ plot.phylog.lm<-function(x){
   num.plot.fit<-length(names(x$Fits))-1
   num.plot.F<-length(names(x$MarginalTest))-1
   num.simul<-dim(x$MarginalTests)[1]-1
-  par(ask=TRUE)
+
+  figs.to.plot <- num.plot.fit + num.plot.F
+  nb.fig <- prod(par("mfcol"))
+  par(ask= interactive() && nb.fig < figs.to.plot)
+
   par(las=1)
   for(i in 1:num.plot.fit) {
     hist(x$Fits[,i+1],xlab=names(x$Fits)[i+1],main="Histogram of model terms")
@@ -592,7 +596,10 @@ plot.phylog.prcomp<-function(x,...){
   on.exit(par(oldpar))
   num.plots<-dim(x$Eigenvalues)[2]-1
   num.simul<-dim(x$Eigenvalues)[1]-1
-  par(ask=TRUE)
+
+  nb.fig <- prod(par("mfcol"))
+  par(ask= interactive() && nb.fig < num.plots)
+
   par(las=1)
   mean.eigenvalue <- apply(as.matrix(x$Eigenvalues[-1,][-1]),2,mean)
   plot(c(1,num.plots),c(0,max(x$Eigenvalues[,-1])),type="n",ylab="Value of eigenvalue",xlab="Eigenvalue",main="Scree plot as in Horn (1965)")
@@ -746,7 +753,10 @@ plot.phylog.cancor<-function(x,...){
   on.exit(par(oldpar))
   num.plots<-dim(x$CanonicalCorrelations)[2]-1
   num.simul<-dim(x$CanonicalCorrelations)[1]-1
-  par(ask=TRUE)
+
+  nb.fig <- prod(par("mfcol"))
+  par(ask= interactive() && nb.fig < num.plots)
+
   par(las=1)
   for(i in 1:num.plots) {
       p.value <- (sum(x$CanonicalCorrelations[-1,i+1] > x$CanonicalCorrelations[1,i+1]) + 1) / (num.simul + 1)
