@@ -1,3 +1,6 @@
+Version 1.0.3. 2004/03/29
+- Minor change to allow running in R-1.9.0 (devel)
+
 Version 1.0.2. 2003/07/28
 - Bug fixes to allow to run in R 1.7.1 and R 1.8.0 (devel)
 - Tidy up the code
