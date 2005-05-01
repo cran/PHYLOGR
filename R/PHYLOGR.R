@@ -642,37 +642,37 @@ lm.phylog <- function(formula, data, max.num = 0, weights = NULL,
 
 
 
-prcomp.phylog <- function(data, max.num = 0, exclude.tips = NULL,
-                          lapply.size = 100, center = TRUE, scale = TRUE){
+prcomp.phylog <- function(x, max.num = 0, exclude.tips = NULL,
+                          lapply.size = 100, center = TRUE, scale = TRUE, ...){
 ##  require(mva, quietly = FALSE, warn.conflicts = TRUE) no longer needed
-## pass as data the columns you want analyzed AND, as first column, sim.counter
+## pass as x the columns you want analyzed AND, as first column, sim.counter
     ## and as second columns Tips
 ## using looping over lapply and keeping my.drop outside  
-  if(min(data$sim.counter) == 1)
-      stop("You need the input file to include original data from an inp or similar file; these are the data whose coefficients you are trying to test")
+  if(min(x$sim.counter) == 1)
+      stop("You need the input file to include original x from an inp or similar file; these are the data whose coefficients you are trying to test")
 
-  if(!is.null(exclude.tips)) data <-
-      data[match(data$Tips, exclude.tips, nomatch = 0) == 0, ] 
-  if(max.num) {max.num <- min(max(data$sim.counter), max.num)
-               data <- data[data$sim.counter<max.num + 1, ] }
-  else max.num <- max(data$sim.counter)
+  if(!is.null(exclude.tips)) x <-
+      x[match(x$Tips, exclude.tips, nomatch = 0) == 0, ] 
+  if(max.num) {max.num <- min(max(x$sim.counter), max.num)
+               x <- x[x$sim.counter<max.num + 1, ] }
+  else max.num <- max(x$sim.counter)
 
-  data <- data[, -2]
+  x <- x[, -2]
   
   loop.counter <- (max.num + 1)%/%lapply.size
   rest.of.data <- (max.num + 1)%%lapply.size
   
-  tmp <- matrix(nrow = max.num + 1, ncol = dim(data)[2]-1)
+  tmp <- matrix(nrow = max.num + 1, ncol = dim(x)[2]-1)
   
   
   i <- 0
   if (loop.counter) { #only enter in the loop if needed
       for(i in 1:loop.counter){
-          datai <-
-              data[data$sim.counter <= ((i * lapply.size)-1) &
-                   data$sim.counter >= ((i-1) * lapply.size), ]  
+          xi <-
+              x[x$sim.counter <= ((i * lapply.size)-1) &
+                   x$sim.counter >= ((i-1) * lapply.size), ]  
           tmp[(((i-1) * lapply.size) + 1):(i * lapply.size), ] <- 
-              matrix(unlist(lapply(split(datai, datai$sim.counter),
+              matrix(unlist(lapply(split(xi, xi$sim.counter),
                                    function(datos, center, scale){
                                        (prcomp(datos[, -1], center = center,
                                                scale = scale)[[1]])^2
@@ -683,9 +683,9 @@ prcomp.phylog <- function(data, max.num = 0, exclude.tips = NULL,
   }
 
   if (rest.of.data){
-      datai <- data[data$sim.counter >= (loop.counter * lapply.size), ]
+      xi <- x[x$sim.counter >= (loop.counter * lapply.size), ]
       tmp[(((i * lapply.size) + 1):(max.num + 1)), ] <-
-          matrix(unlist(lapply(split(datai, datai$sim.counter),
+          matrix(unlist(lapply(split(xi, xi$sim.counter),
                                function(datos, center, scale){
                                    (prcomp(datos[, -1], center = center,
                                            scale = scale)[[1]])^2
@@ -695,7 +695,7 @@ prcomp.phylog <- function(data, max.num = 0, exclude.tips = NULL,
   }
 
 
-  dimnames(tmp) <- list(NULL, paste("lambda", 1:(dim(data)[2]-1), sep = ""))  
+  dimnames(tmp) <- list(NULL, paste("lambda", 1:(dim(x)[2]-1), sep = ""))  
   
   structure(list(call = match.call(), 
                  Eigenvalues =

@@ -7,12 +7,12 @@
  return the eigenvalues.
 }
 \usage{
-prcomp.phylog(data, max.num=0, exclude.tips=NULL, lapply.size=100,
-              center=TRUE, scale=TRUE)
+prcomp.phylog(x, max.num=0, exclude.tips=NULL, lapply.size=100,
+              center=TRUE, scale=TRUE, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
- \item{data}{ the columns from a data set returned from read.sim.data
+ \item{x}{ the columns from a data set returned from read.sim.data
    that you want to use in the PCA. The first column MUST be sim.counter
  and the second Tips.}
  \item{max.num}{ if different from 0, the maximum number of simulations
@@ -25,6 +25,7 @@ prcomp.phylog(data, max.num=0, exclude.tips=NULL, lapply.size=100,
  yes; see prcomp.}
  \item{scale}{ should the data be scaled before the analyses? defaults
    to yes; see prcomp. }
+ \item{...}{Not used.}
 }
 \value{ A list (of class phylog.prcomp) with components
   \item{call}{the call to the function}
