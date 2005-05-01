@@ -4,7 +4,6 @@ GarlandJanis.Original   Garland & Janis's 1993 data on mammalian
                         running speed and limb length
 GarlandJanis.varcov     Phylogenetic variance-covariance matrix for
                         Garland & Janis (1993).
-Helper.functions        Helper functions
 Lacertid.IC             Independet contrasts for Bauwens and
                         Díaz-Uriarte (1997) lacertid data set
 Lacertid.Original       Bauwens and Díaz-Uriarte (1997) lacertid data
@@ -17,13 +16,15 @@ cor.origin              Correlation Through the Origin
 lm.phylog               Linear Models from Simulated Data Sets
 matrix.D                Produce the Matrix D of Garland and Ives
                         (2000) for GLS
+num.sim.tips            Helper functions
 phylog.gls.fit          Phylogenetically-Based GLS Model Fitting
 plot.phylog.cancor      Plot a phylog.cancor object
 plot.phylog.lm          Plot a phylog.lm object
 plot.phylog.prcomp      Plot a phylog.prcomp object
 prcomp.phylog           Principal Components Analysis from Simulated
                         Data Sets
-print.summary.phylog    Printing summaries of PHYLOGR statistical
+print.summary.phylog.lm
+                        Printing summaries of PHYLOGR statistical
                         functions
 read.inp.data           Read Inp Data Files
 read.pdi.data           Read Pdi Data Files
