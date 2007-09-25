@@ -19,11 +19,11 @@ cor.origin(x, y)
   forcing the line through the origin).
 }
 \references{
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
 }
-\author{ R. Díaz-Uriarte and T. Garland, Jr.}
+\author{ R. Diaz-Uriarte and T. Garland, Jr.}
 \note{ This is a very simple function, provided for convenience.  You
   can obtain the p-value, if you wish, with the usual formula for the
   t-statistic:

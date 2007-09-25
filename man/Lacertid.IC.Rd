@@ -1,11 +1,11 @@
 \name{Lacertid.IC}
 \alias{Lacertid.IC}
 \non_function{}
-\title{ Independet contrasts for Bauwens and Díaz-Uriarte (1997) lacertid data set }
+\title{ Independet contrasts for Bauwens and Diaz-Uriarte (1997) lacertid data set }
 \description{
-  Independent contrast for Bauwens and Díaz-Uriarte (1997) data set; they are
+  Independent contrast for Bauwens and Diaz-Uriarte (1997) data set; they are
   based on the data in the file Lacertid.Original using the
-  phylogeny in Buwens and Díaz-Uriarte (1997), Tree A  --- see \code{\link{Lacertid.varcov}}}
+  phylogeny in Buwens and Diaz-Uriarte (1997), Tree A  --- see \code{\link{Lacertid.varcov}}}
 \format{ The data frame contains eight columns.
   The first seven columns are the (standardized) independent contrasts for the respective variables
   ---see detailed explanation in  \code{\link{Lacertid.Original}}. The
@@ -17,7 +17,7 @@
 
 
 
-\source{Bauwens, D., and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
 }
 
@@ -25,7 +25,7 @@
 \seealso{ \code{\link{Lacertid.varcov}}, \code{\link{Lacertid.Original}}}
 \examples{
 # Obtaining correlations through the origin;
-# compare with Table 3 in Bauwens and Díaz-Uriarte (1997).
+# compare with Table 3 in Bauwens and Diaz-Uriarte (1997).
 
 data(Lacertid.IC)
 cor.lacert <- matrix(nrow=7,ncol=7) 

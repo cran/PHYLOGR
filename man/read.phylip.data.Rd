@@ -25,7 +25,7 @@ read.phylip.data(input.phylip.file, variable.names=NULL)
   the names of tips and remaining columns the data columns from
   the phylip file.
 }
-\references{ Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+\references{ Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.}
 
@@ -41,7 +41,7 @@ read.phylip.data(input.phylip.file, variable.names=NULL)
   but you might want to follow it if you plan to use PHYLIP.
   }
   
-\author{ Díaz-Uriarte, R., and Garland, T., Jr.}
+\author{ Diaz-Uriarte, R., and Garland, T., Jr.}
 
 \seealso{
   \code{\link{read.inp.data}}, \code{\link{read.pdi.data}},  \code{\link{read.sim.data}},  

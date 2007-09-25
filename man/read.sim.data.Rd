@@ -75,11 +75,11 @@ read.sim.data(sim.files, inp.files = NULL, pdi.files = NULL,
   second column is called tips, and the rest are data columns (including, if given, the other.variables column).
 }
 \references{
-Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
 }
-\author{ Ramón Díaz-Uriarte and Thodore Garland, Jr.}
+\author{ Ramon Diaz-Uriarte and Thodore Garland, Jr.}
 
 \seealso{ \code{\link{read.pdi.data}}, \code{\link{read.inp.data}}, \code{\link{read.phylip.data}}. There
   are generic functions plot and summary.}

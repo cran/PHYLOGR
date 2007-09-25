@@ -44,7 +44,7 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
     coefficients for the non-simulated (''real'') data correspond to sim.counter=0.}
 }
 \references{
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
@@ -57,7 +57,7 @@ lm.phylog(formula, data, max.num=0, weights=NULL, exclude.tips=NULL,
 
   
 }
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 \note{ The marginal F-tests returned are obtained from drop1, and thus
   respect the marginality principle.  For instance,
     if your model is y \eqn{\sim}{~}  x1 + x2*x3 you will see an F for x1 and an F

@@ -3,7 +3,7 @@
 \non_function{}
 \title{ A simulated data set }
 \description{
-  A simulated data set; the phylogeny is based in Bauwens and Díaz-Uriarte
+  A simulated data set; the phylogeny is based in Bauwens and Diaz-Uriarte
   (1997), such as is included in the file ifsm.pdi (in the Examples
   directory). But the data are all completely fictitious and have
   nothing to do with lacertids (or, for that matter, with any other creatures).}
@@ -29,7 +29,7 @@ This data frame contains the following columns:
 }
 }
 }
-\source{Bauwens, D., and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
 }
 

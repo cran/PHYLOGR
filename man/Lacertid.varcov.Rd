@@ -2,9 +2,9 @@
 \alias{Lacertid.varcov}
 \non_function{}
 \title{ Variance-covariance matrix for lacertids from Bauwens and
-  Díaz-uriarte (1997) }
+  Diaz-uriarte (1997) }
 \description{ Phylogenetic variance-covariance matrix for 18 species of
-  lacertids. It is based on Tree A of Bauwens and Díaz-Uriarte (1997).}
+  lacertids. It is based on Tree A of Bauwens and Diaz-Uriarte (1997).}
 
 \format{
 The \code{Lacertid.varcov} data frame has 18 rows and 18 columns,
@@ -15,7 +15,7 @@ each entry dij is the the sum of branch segment lengths that species i and j sha
 }
 
   
-\source{Bauwens, D., and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
 }
 

@@ -33,13 +33,13 @@
 
 \references{ 
 
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
 }
 
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 
 
 \seealso{ \code{\link{summary.phylog.lm}},
