@@ -1,9 +1,9 @@
 \name{Lacertid.Original}
 \alias{Lacertid.Original}
 \non_function{}
-\title{ Bauwens and Díaz-Uriarte (1997) lacertid data }
+\title{ Bauwens and Diaz-Uriarte (1997) lacertid data }
 \description{
-This is part of the data set used by Bauwens and Díaz-Uriarte (1997) in
+This is part of the data set used by Bauwens and Diaz-Uriarte (1997) in
 their analysis of lacertid life histories.  The data include several
 life history traits of 18 lacertid species.  
 }
@@ -23,7 +23,7 @@ This data frame contains the following columns:
   
 
 
-\source{Bauwens, D., and Díaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
 }
 

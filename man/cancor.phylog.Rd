@@ -30,7 +30,7 @@ cancor.phylog(data1, data2, max.num=0, exclude.tips=NULL,lapply.size=100,
 
 \references{ 
 
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
@@ -42,7 +42,7 @@ cancor.phylog(data1, data2, max.num=0, exclude.tips=NULL,lapply.size=100,
   
   Morrison, D. F. (1990) \emph{Multivariate statistcal methods, 3rd ed.} McGraw-Hill.
 }
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 
 \section{WARNING}{It is
   necessary to be careful with the null hypothesis you are testing and

@@ -23,12 +23,12 @@ read.inp.data(input.inp.files, variable.names=NULL)
   the inp file(s).
 }
 \references{
-Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
 }
 
-\author{ Díaz-Uriarte, R., and Garland, T., Jr.}
+\author{ Diaz-Uriarte, R., and Garland, T., Jr.}
 
 \seealso{
   \code{\link{read.pdi.data}}, \code{\link{read.phylip.data}}, \code{\link{read.sim.data}},  

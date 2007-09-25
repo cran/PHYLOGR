@@ -5,17 +5,17 @@ GarlandJanis.Original   Garland & Janis's 1993 data on mammalian
 GarlandJanis.varcov     Phylogenetic variance-covariance matrix for
                         Garland & Janis (1993).
 Lacertid.IC             Independet contrasts for Bauwens and
-                        Díaz-Uriarte (1997) lacertid data set
-Lacertid.Original       Bauwens and Díaz-Uriarte (1997) lacertid data
+                        Diaz-Uriarte (1997) lacertid data set
+Lacertid.Original       Bauwens and Diaz-Uriarte (1997) lacertid data
 Lacertid.varcov         Variance-covariance matrix for lacertids from
-                        Bauwens and Díaz-uriarte (1997)
+                        Bauwens and Diaz-uriarte (1997)
 SimulExample            A simulated data set
 cancor.phylog           Canonical Correlation Analysis from Simulated
                         Data Sets
 cor.origin              Correlation Through the Origin
 lm.phylog               Linear Models from Simulated Data Sets
-matrix.D                Produce the Matrix D of Garland and Ives
-                        (2000) for GLS
+matrix.D                Produce the Matrix D of Garland and Ives (2000)
+                        for GLS
 num.sim.tips            Helper functions
 phylog.gls.fit          Phylogenetically-Based GLS Model Fitting
 plot.phylog.cancor      Plot a phylog.cancor object

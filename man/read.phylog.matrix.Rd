@@ -16,7 +16,7 @@ read.phylog.matrix(x)
 \value{a phylogenetic variance-covariance matrix that can be used in R
   functions, such as for GLS models.} 
 \references{
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
@@ -24,7 +24,7 @@ read.phylog.matrix(x)
   present: confidence intervals for regression equations in phylogenetic
   comparative methods. \emph{The American Naturalist}, 155, 346-364.
 }
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 
 
 \seealso{ \code{\link{matrix.D}},  \code{\link{phylog.gls.fit}}}

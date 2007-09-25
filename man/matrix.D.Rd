@@ -18,7 +18,7 @@ matrix.D(x)
 }
 \value{A variance-covariance matrix.}
 \references{
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
@@ -30,7 +30,7 @@ matrix.D(x)
 \note{ The file read is a dsc file generated from PDDIST under option 5
   with the additional options : - in matrix form; - with header; - with
   scaled values. }
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 
 
 \seealso{\code{\link{read.phylog.matrix}}, \code{\link{phylog.gls.fit}}}

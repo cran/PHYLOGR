@@ -25,7 +25,7 @@ phylog.gls.fit(x, y, cov.matrix, intercept = TRUE, exclude.tips = NULL)
 \value{a fitted linear model}
 \references{
 
-  Díaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
+  Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
   an R package for the analysis of comparative data via Monte Carlo
   simulations and generalized least squares approaches.
   
@@ -37,7 +37,7 @@ phylog.gls.fit(x, y, cov.matrix, intercept = TRUE, exclude.tips = NULL)
     statistics with S-Plus, 3rd ed.} Springer-Verlag.
 
 }
-\author{Ramón Díaz-Uriarte and Theodore Garland, Jr.}
+\author{Ramon Diaz-Uriarte and Theodore Garland, Jr.}
 
 \section{WARNING}{This is one possible implementation of GLS that uses
   the transformation of the Y and X as explained in Garland and Ives (2000). Ideally, we
