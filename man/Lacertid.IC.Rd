@@ -1,6 +1,6 @@
 \name{Lacertid.IC}
 \alias{Lacertid.IC}
-\non_function{}
+\docType{data}
 \title{ Independet contrasts for Bauwens and Diaz-Uriarte (1997) lacertid data set }
 \description{
   Independent contrast for Bauwens and Diaz-Uriarte (1997) data set; they are

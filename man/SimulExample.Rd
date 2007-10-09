@@ -1,6 +1,6 @@
 \name{SimulExample}
 \alias{SimulExample}
-\non_function{}
+\docType{data}
 \title{ A simulated data set }
 \description{
   A simulated data set; the phylogeny is based in Bauwens and Diaz-Uriarte

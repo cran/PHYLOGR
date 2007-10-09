@@ -1,6 +1,6 @@
 \name{Lacertid.Original}
 \alias{Lacertid.Original}
-\non_function{}
+\docType{data}
 \title{ Bauwens and Diaz-Uriarte (1997) lacertid data }
 \description{
 This is part of the data set used by Bauwens and Diaz-Uriarte (1997) in

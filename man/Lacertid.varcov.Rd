@@ -1,6 +1,6 @@
 \name{Lacertid.varcov}
 \alias{Lacertid.varcov}
-\non_function{}
+\docType{data}
 \title{ Variance-covariance matrix for lacertids from Bauwens and
   Diaz-uriarte (1997) }
 \description{ Phylogenetic variance-covariance matrix for 18 species of
