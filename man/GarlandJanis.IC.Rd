@@ -1,6 +1,6 @@
 \name{GarlandJanis.IC}
 \alias{GarlandJanis.IC}
-\non_function{}
+\docType{data}
 \title{ Independet contrasts for Garland \& Janis data set }
 \description{
   Independent contrast for Garland \& Janis (1993) data set; they are

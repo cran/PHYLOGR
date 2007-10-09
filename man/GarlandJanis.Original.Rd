@@ -1,6 +1,6 @@
 \name{GarlandJanis.Original}
 \alias{GarlandJanis.Original}
-\non_function{}
+\docType{data}
 \title{ Garland \& Janis's 1993 data on mammalian running speed and limb length }
 \description{
 This data set was used by Garland \& Janis in their analysis of
