@@ -1,3 +1,7 @@
+Version 1.0.7 2010/08/09
+- Fixed typos in Rd files.
+
+
 Version 1.0.6 2007/10/09
 - Removed obselete "\non_function" from some Rd and use "\docType{data}". 
 

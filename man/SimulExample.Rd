@@ -7,31 +7,32 @@
   (1997), such as is included in the file ifsm.pdi (in the Examples
   directory). But the data are all completely fictitious and have
   nothing to do with lacertids (or, for that matter, with any other creatures).}
-}
 \format{
 This data frame contains the following columns:
 \describe{
-\item{sim.counter}{the simulation counter}
-\item{Tips}{ the name of tips; it matches those for the lacertid
-  examples but, again, is unrelated to those}
-\item{y}{ one numeric variable}
-\item{x1}{another numeric variable}
-\item{x2}{ditto}
-\item{x3}{ditto}
-\item{x4}{ditto}
-\item{x5}{guess what? same thing}
-\item{x6}{ again}
-\item{x7}{ once more}
-\item{diet}{a factor with fictitious levels
-\code{Carnivore} 
-\code{Herbivore} 
-\code{Ommnivore} 
+  \item{sim.counter}{the simulation counter}
+  \item{Tips}{ the name of tips; it matches those for the lacertid
+    examples but, again, is unrelated to those}
+  \item{y}{ one numeric variable}
+  \item{x1}{another numeric variable}
+  \item{x2}{ditto}
+  \item{x3}{ditto}
+  \item{x4}{ditto}
+  \item{x5}{guess what? same thing}
+  \item{x6}{ again}
+  \item{x7}{ once more}
+  \item{diet}{a factor with fictitious levels
+    \code{Carnivore} 
+    \code{Herbivore} 
+    \code{Ommnivore} 
+  }
 }
 }
-}
-\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of
+  life-history 
+  traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
-}
+
 
 \examples{
 # a canonical correlation example
