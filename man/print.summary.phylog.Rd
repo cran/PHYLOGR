@@ -16,8 +16,8 @@
 \method{print}{summary.phylog.prcomp}(x, ...)
 }
 \arguments{
-  \item{x} { an object of the appropriate class.}
-  \item{...}{ further parameters to be passed (currently not used). }
+  \item{x}{an object of the appropriate class.}
+  \item{...}{further parameters to be passed (currently not used).}
   }
 %- maybe also `usage' for other objects documented here.
 \details{
@@ -45,9 +45,5 @@
 \seealso{ \code{\link{summary.phylog.lm}},
   \code{\link{summary.phylog.prcomp}}, \code{\link{summary.phylog.cancor}}}
 
-
-
-\examples{
-}
 
 \keyword{ methods }%-- one or more ...

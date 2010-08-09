@@ -20,10 +20,6 @@
   calls to read.table, scan, etc. They are of no immediate use for the
   end user, but might be helpful for further programming.
 }
-\usage{
-}
-\arguments{
-  }
 \value{
   Depends on the helper function; here is a summary:
   \item{num.sim.tips}{number of tips and number of simulations of a simulated data set}

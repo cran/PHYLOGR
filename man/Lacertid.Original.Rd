@@ -23,9 +23,10 @@ This data frame contains the following columns:
   
 
 
-\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of
+  life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
-}
+
 
 
 \seealso{ \code{\link{Lacertid.varcov}}, \code{\link{Lacertid.IC}}}

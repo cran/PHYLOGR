@@ -1,7 +1,7 @@
 \name{Lacertid.IC}
 \alias{Lacertid.IC}
 \docType{data}
-\title{ Independet contrasts for Bauwens and Diaz-Uriarte (1997) lacertid data set }
+\title{Independet contrasts for Bauwens and Diaz-Uriarte (1997) lacertid data set }
 \description{
   Independent contrast for Bauwens and Diaz-Uriarte (1997) data set; they are
   based on the data in the file Lacertid.Original using the
@@ -13,13 +13,9 @@
   \item{contr}{the names of the contrasts, as the names of the two
     nodes that form the contrast}}
 }
-
-
-
-
-\source{Bauwens, D., and Diaz-Uriarte, R. (1997) Covariation of life-history traits in lacertid lizards: a
+\source{Bauwens, D., and Diaz-Uriarte, R. (1997)
+  Covariation of life-history traits in lacertid lizards: a
   comparative study. \emph{The American Naturalist}, \bold{149}, 91-11}
-}
 
 
 \seealso{ \code{\link{Lacertid.varcov}}, \code{\link{Lacertid.Original}}}

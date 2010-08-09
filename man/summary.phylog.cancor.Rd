@@ -55,11 +55,11 @@
 
 \value{ A list (of class summary.phylog,cancor) with elements
   \item{call}{the call to function cancor.phylog.}
-  \item{original.LR.statistic} {the likelihood ratio statistic for the
+  \item{original.LR.statistic}{the likelihood ratio statistic for the
     test that all canonical correlations are zero}
   \item{original.canonicalcorrelations}{the canonical correlations
     corresponding to the original (''real'') data set.}
-  \item{p.value.overall.test} {the p-value for the test that all
+  \item{p.value.overall.test}{the p-value for the test that all
     canonical correlations are zero}
   \item{p.value.corwise}{the correlation-wise p-value ---see Details}
   \item{p.value.mult}{the multiple correlations p-value; see Details}
