@@ -568,8 +568,15 @@ lm.phylog <- function(formula, data, max.num = 0, weights = NULL,
     ##  terms.in.model <- names(lm(formula = formula, data = data, weights = w, subset = sim.counter == 0)[[1]])
     ## there should be a simpler way
     
-    terms.in.model <- names(lm(formula = formula, data = data,
-                               subset = sim.counter == 0)[[1]])
+    ## terms.in.model <- names(lm(formula = formula, data = data,
+    ##                            subset = sim.counter == 0)[[1]])
+
+    ## I am getting a "note": no visible binding for global variable ‘sim.counter’
+    ## let's see if this solves it
+    terms.in.model <- names(lm(formula = formula,
+                               data = data[data$sim.counter == 0,])[[1]])
+
+
     ##note that there is no weights argument here; problems getting it to run
     ## in both R-1.1.1 and R-1.2.0; after all, the names are the same with or
     ##without weights. Still, there should be a simpler way!!

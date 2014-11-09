@@ -1,3 +1,8 @@
+Version 1.0.8 2010/08/09
+- path.packages instead of .path.package (later is defunct).
+- change in lm.phylog to prevent (incorrect) note about no visible binding
+  for global variable ‘sim.counter’ in a call to subset.
+
 Version 1.0.7 2010/08/09
 - Fixed typos in Rd files.
 

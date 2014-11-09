@@ -53,13 +53,13 @@ read.phylip.data(input.phylip.file, variable.names=NULL)
 %#ifdef unix
 # This works under both Unix and Windows.
 # First need to find out where the ''Examples'' directory is located.
-path.to.example <- paste(.path.package(package="PHYLOGR"),"Examples/",sep="/") 
+path.to.example <- paste(path.package(package="PHYLOGR"),"Examples/",sep="/") 
 %#endif
 
 
 %#ifdef windows
 % path.to.example <-
-%paste(.path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
+%paste(path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
 %#endif
 
 lacertid.data.name <- paste(path.to.example,"LacertidData.PhylipInfile",sep="")

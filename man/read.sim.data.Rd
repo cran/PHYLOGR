@@ -89,13 +89,13 @@ Diaz-Uriarte, R., and Garland, T., Jr., in prep. PHYLOGR:
 %#ifdef unix
 # First we need to find where the Examples directory is.
 # You could enter it directly (see read.pdi.data for an example).
- path.to.example <- paste(.path.package(package="PHYLOGR"),"Examples/",sep="/") 
+ path.to.example <- paste(path.package(package="PHYLOGR"),"Examples/",sep="/") 
 %#endif
 
 
 %#ifdef windows
 % path.to.example <-
-%paste(.path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
+%paste(path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
 %#endif
 
 # simple example

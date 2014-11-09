@@ -33,13 +33,13 @@ read.phylog.matrix(x)
 \examples{
 %#ifdef unix
 # First need to find where the example data sets are
- path.to.example <- paste(.path.package(package="PHYLOGR"),"Examples/",sep="/") 
+ path.to.example <- paste(path.package(package="PHYLOGR"),"Examples/",sep="/") 
 %#endif
 
 
 %#ifdef windows
 % path.to.example <-
-%paste(.path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
+%paste(path.package(package="phylog"),"Examples\\",sep="\\") # where the example data sets are
 %#endif
 
 example.dsc.file <- paste(path.to.example,"ifsmi.dsc",sep="") 
