@@ -1,6 +1,6 @@
 Package: PHYLOGR
-Version: 1.0.8
-Date: 2014/11/09
+Version: 1.0.10
+Date: 2018-03-20
 Title: Functions for Phylogenetically Based Statistical Analyses
 Author: Ramon Diaz-Uriarte <rdiaz@cnio.es> and Theodore Garland, Jr
         <theodore.garland@ucr.edu>
@@ -10,7 +10,7 @@ Description: Manipulation and analysis of phylogenetically simulated
         data sets and phylogenetically based analyses using GLS.
 License: GPL (>= 2)
 URL: http://ligarto.org/rdiaz
-Packaged: 2014-11-09 14:42:16.696 UTC; ramon
 NeedsCompilation: no
+Packaged: 2018-03-20 16:13:55.067 UTC; ramon
 Repository: CRAN
-Date/Publication: 2014-11-10 01:39:39
+Date/Publication: 2018-03-20 16:42:01 UTC
